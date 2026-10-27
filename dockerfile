@@ -7,6 +7,9 @@ WORKDIR /app
 # Copy the model training script into the container
 COPY src/ .
 
+# Copy the dataset into the container
+COPY data/ ./data/
+
 # Install Scikit-Learn and joblib
 RUN pip install -r requirements.txt
 
