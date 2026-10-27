@@ -53,7 +53,7 @@ MLOPS-Lab3/
 ├── .dockerignore
 ├── .gitignore
 ├── Dockerfile
-└── ReadMe.md
+└── README.md
 ```
 
 ---
