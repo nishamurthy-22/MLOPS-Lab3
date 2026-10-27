@@ -1,3 +1,8 @@
-scikit-learn
-joblib
-pandas
+# Direct dependencies
+scikit-learn==1.7.2
+joblib==1.6.0
+pandas==2.3.3
+
+# Pinned transitive dependencies for fully reproducible builds
+numpy==2.2.6
+scipy==1.15.3
