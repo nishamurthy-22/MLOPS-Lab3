@@ -1,4 +1,5 @@
 # Import necessary libraries
+import os
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingClassifier
@@ -49,6 +50,7 @@ if __name__ == '__main__':
     cm = confusion_matrix(y_test, y_pred, labels=LABELS)
     print(pd.DataFrame(cm, index=LABELS, columns=LABELS))
 
-    # Save the model to a file
-    joblib.dump(model, 'maternal_risk_model.pkl')
-    print("\nThe model training was successful")
+    # Save the model to the models/ folder (mounted as a volume at runtime)
+    os.makedirs('models', exist_ok=True)
+    joblib.dump(model, 'models/maternal_risk_model.pkl')
+    print("Model saved to models/maternal_risk_model.pkl")
